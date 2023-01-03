@@ -4,7 +4,8 @@
         <AddEditNote
             ref="AddEditNoteRef"
             @update:modelValue="newNote = $event"
-            v-model="newNote">
+            v-model="newNote"
+            placeholder="Add a new note"
         >
             <template #buttons>
                 <button 

@@ -5,8 +5,15 @@
             bgColor="info-dark"
             ref="addEditNoteRef"
             placeholder="Edit note"
+            label="Edit Note"
         >
             <template #buttons>
+                <button
+                    @click="$router.push('/')" 
+                    class="button is-link is-light"
+                >
+                    Cancel
+                </button>
                 <button 
                     class="button is-link has-background-info"
                     :disabled="!noteContent"

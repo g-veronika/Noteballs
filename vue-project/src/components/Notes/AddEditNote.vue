@@ -3,6 +3,13 @@
         class="card p-4 mb-5"
         :class="`has-background-${ bgColor }`"
     >
+
+        <label
+            v-if="label" 
+            class="has-text-white mb-6">
+                {{ label }}
+        </label>
+
         <div class="field">
             <div class="control">
                 <textarea 
@@ -26,7 +33,6 @@
 <script setup>
 
     import { ref } from 'vue';
-
     
     const props = defineProps({
         modelValue: {
@@ -40,6 +46,9 @@
         placeholder: {
             type: String,
             default: 'Type something'
+        },
+        label: {
+            type: String,
         }
     })
 
