@@ -1,5 +1,8 @@
 <template>
-    <div class="card has-background-success-dark p-4 mb-5">
+    <div 
+        class="card p-4 mb-5"
+        :class="`has-background-${ bgColor }`"
+    >
         <div class="field">
             <div class="control">
                 <textarea 
@@ -29,6 +32,10 @@
         modelValue: {
             type: String,
             required: true
+        },
+        bgColor: {
+            type: String,
+            default: 'success-dark'
         }
     })
 
