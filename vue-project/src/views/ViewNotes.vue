@@ -49,17 +49,19 @@
 
     const addNote = () => {
 
-        let currentDate = new Date().getTime(),
-            id = currentDate.toString()
+        storeNotes.addNote()
 
-        let note = {
-            id,
-            content: newNote.value
-        }
+        // let currentDate = new Date().getTime(),
+        //     id = currentDate.toString()
 
-        notes.value.unshift(note)
+        // let note = {
+        //     id,
+        //     content: newNote.value
+        // }
+
+        // notes.value.unshift(note)
+
         newNote.value = ''
-
         newNoteRef.value.focus()
     }
 
