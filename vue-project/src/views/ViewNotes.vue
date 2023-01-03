@@ -2,8 +2,9 @@
     <div class="notes">
 
         <AddEditNote
-            v-model="newNote">
+            ref="AddEditNoteRef"
             @update:modelValue="newNote = $event"
+            v-model="newNote">
         >
             <template #buttons>
                 <button 
@@ -12,9 +13,10 @@
                 class="button is-link has-background-success"
             >
                 Add New Note 
-            </button>
+                </button>
             </template>
         </AddEditNote>
+
         <!-- <div class="card has-background-success-dark p-4 mb-5">
             <div class="field">
                 <div class="control">
@@ -58,15 +60,12 @@
     const storeNotes = useStoreNotes()    
 
     const newNote = ref('')
-
-    const newNoteRef = ref(null)
+    const AddEditNoteRef = ref(null)
 
     const addNote = () => {
-
         storeNotes.addNote(newNote.value)
         newNote.value = ''
-        newNoteRef.value.focus()
+        AddEditNoteRef.value.focusTextarea()
     }
-
 
 </script>
