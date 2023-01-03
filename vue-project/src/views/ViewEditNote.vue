@@ -38,9 +38,8 @@
     const route = useRoute()
  
     const noteContent = ref('')
-    console.log(route.params.id);
     // const addEditNoteRef = ref()
 
-    noteContent.value = storeNotes.getNoteContent
+    noteContent.value = storeNotes.getNoteContent(route.params.id)
 
 </script>

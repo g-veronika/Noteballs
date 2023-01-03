@@ -11,7 +11,7 @@
         </label>
 
         <div class="field">
-            <div class="control">
+            <div class="control ">
                 <textarea 
                     :value="modelValue" 
                     class="textarea" 
