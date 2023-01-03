@@ -2,12 +2,13 @@
     <div class="edit-note">
         <AddEditNote
             v-model="noteContent"
-            bgColor="success-light"
+            bgColor="info-dark"
             ref="addEditNoteRef"
         >
             <template #buttons>
                 <button 
-                    class="button is-link has-background-success"
+                    class="button is-link has-background-info"
+                    :disabled="!noteContent"
                 >
                     Save note 
                 </button>
