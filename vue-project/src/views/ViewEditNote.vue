@@ -4,6 +4,7 @@
             v-model="noteContent"
             bgColor="info-dark"
             ref="addEditNoteRef"
+            placeholder="Edit note"
         >
             <template #buttons>
                 <button 
@@ -16,6 +17,7 @@
     </AddEditNote>
     </div>
 </template>
+
 
 <script setup>
 

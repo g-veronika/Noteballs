@@ -8,7 +8,7 @@
                 <textarea 
                     :value="modelValue" 
                     class="textarea" 
-                    placeholder="Add a new note" 
+                    :placeholder="placeholder" 
                     ref="textareaRef"
                     @input="(event) => $emit('update:modelValue', event.target.value)"
                 />
@@ -36,6 +36,10 @@
         bgColor: {
             type: String,
             default: 'success-dark'
+        },
+        placeholder: {
+            type: String,
+            default: 'Type something'
         }
     })
 
