@@ -1,7 +1,10 @@
 <template>
     <div class="notes">
 
-        <AddEditNote>
+        <AddEditNote
+            v-model="newNote">
+            @update:modelValue="newNote = $event"
+        >
             <template #buttons>
                 <button 
                 @click="addNote"
@@ -61,7 +64,6 @@
     const addNote = () => {
 
         storeNotes.addNote(newNote.value)
-
         newNote.value = ''
         newNoteRef.value.focus()
     }
