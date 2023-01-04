@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vueuse/core": "^9.10.0",
     "bulma": "^0.9.4",
     "pinia": "^2.0.28",
     "vue": "^3.2.45",
