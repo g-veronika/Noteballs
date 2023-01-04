@@ -15,6 +15,7 @@
                     Cancel
                 </button>
                 <button 
+                    @click="handleSaveClicked"
                     class="button is-link has-background-info"
                     :disabled="!noteContent"
                 >
@@ -41,5 +42,9 @@
     // const addEditNoteRef = ref()
 
     noteContent.value = storeNotes.getNoteContent(route.params.id)
+
+    const handleSaveClicked = () => {
+        storeNotes.updateNote(route.params.id, noteContent.value)
+    }
 
 </script>

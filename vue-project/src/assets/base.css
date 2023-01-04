@@ -60,9 +60,10 @@
 }
 
 body {
-  /* min-height: 100vh; */
+  min-height: 100vh;
   color: var(--color-text);
-  background: var(--color-background);
+  /* background: var(--color-background); */
+  background-color: hsl(142, 52%, 96%);
   transition: color 0.5s, background-color 0.5s;
   line-height: 1.6;
   font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
