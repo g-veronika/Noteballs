@@ -16,7 +16,8 @@ a,
   transition: 0.4s;
 }
 
-.field .control {
+.field .control,
+.modal-card-foot {
   width: 100%;
   display: flex;
   justify-content: space-between;
