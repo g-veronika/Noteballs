@@ -23,7 +23,12 @@
             >
                 Cancel
             </button>
-            <button class="button is-danger">Delete Note</button>
+            <button 
+                @click="storeNotes.deleteNote(noteId)"
+                class="button is-danger"
+            >
+                    Delete Note
+            </button>
           </footer>
         </div>
       </div>
@@ -32,12 +37,18 @@
 <script setup>
 
     import { ref, onMounted, onUnmounted } from 'vue';
-    import { controlledComputed, onClickOutside } from '@vueuse/core'
+    import {  onClickOutside } from '@vueuse/core'
+    import { useStoreNotes } from '@/stores/storeNotes'
+
 
     const props = defineProps({
         modelValue: {
             type: Boolean,
             default: false
+        },
+        noteId: {
+            type: String,
+            required: true
         }
     })
 
@@ -65,5 +76,8 @@
         document.removeEventListener('keyup',handleKeyBoard)
     })
     
+    const storeNotes = useStoreNotes()    
+
+
 
 </script>
